@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
       .container {
         display: flex;
         height: 100vh;
-        width: 50vw;
+        width: 60vw;
       }
       .container img {
         width: 100%;
