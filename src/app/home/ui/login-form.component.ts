@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: `app-login-form`,
   template: `
@@ -7,10 +6,6 @@ import { MatButtonModule } from '@angular/material/button';
       <div class="right-container">
         <h1>Tennis Ace</h1>
         <p>Find a tennis buddy within New York City!</p>
-        <div class="button-container">
-          <button mat-raised-button>Login</button>
-          <button mat-raised-button>Sign Up</button>
-        </div>
       </div>
     </div>
   `,
@@ -42,6 +37,6 @@ import { MatButtonModule } from '@angular/material/button';
       }
     `,
   ],
-  imports: [MatButtonModule],
+  imports: [],
 })
 export class LoginFormComponent {}
