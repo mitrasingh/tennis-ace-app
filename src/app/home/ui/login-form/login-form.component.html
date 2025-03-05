@@ -1,39 +1,47 @@
 <div class="container">
-  <div class="right-container">
+  <div class="right-side">
     <h1>Tennis Ace</h1>
-    <p>Find a tennis buddy within New York City!</p>
-    <form [formGroup]="loginForm" (ngSubmit)="emitData()">
-      <label for="email">Email</label>
-      <input
-        formControlName="email"
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-      />
-      @if(email?.hasError('required') && isSubmitted) {
-      <p class="invalid-message">Email is required.</p>
-      } @if(email?.hasError('email') && isSubmitted) {
-      <p class="invalid-message">Please enter a valid email.</p>
-      }
+    <p>Find a tennis buddy in NYC!</p>
+    <h3>Login</h3>
+    <div class="form">
+      <form [formGroup]="loginForm" (ngSubmit)="emitData()">
+        <label for="email">Email</label>
+        <input
+          formControlName="email"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        @if(email?.hasError('required') && isSubmitted) {
+        <p class="invalid-message">Email is required.</p>
+        } @if(email?.hasError('email') && isSubmitted) {
+        <p class="invalid-message">Please enter a valid email.</p>
+        }
 
-      <label for="password">Password</label>
-      <input
-        formControlName="password"
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Enter your password"
-        required
-      />
-      @if(password?.hasError('required') && isSubmitted) {
-      <p class="invalid-message">Password is required.</p>
-      } @if(password?.hasError('minlength') && isSubmitted) {
-      <p class="invalid-message">Password should be 6 characters or more.</p>
-      }
+        <label for="password">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        @if(password?.hasError('required') && isSubmitted) {
+        <p class="invalid-message">Password is required.</p>
+        } @if(password?.hasError('minlength') && isSubmitted) {
+        <p class="invalid-message">Password should be 6 characters or more.</p>
+        }
 
-      <button type="submit">Login</button>
-    </form>
+        <button type="submit">Login</button>
+      </form>
+      <p class="signup-message">
+        Don't have an account?<a routerLink="/signup"
+          ><strong> Sign up.</strong></a
+        >
+      </p>
+    </div>
   </div>
 </div>
