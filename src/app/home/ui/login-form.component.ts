@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 @Component({
-  selector: `app-calltoaction`,
+  selector: `app-login-form`,
   template: `
     <div class="container">
       <div class="right-container">
@@ -44,4 +44,4 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [MatButtonModule],
 })
-export class CallToActionComponent {}
+export class LoginFormComponent {}
