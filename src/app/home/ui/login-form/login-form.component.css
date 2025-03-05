@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 40vw;
+}
+.right-container {
+  background-color: #34495e;
+  color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 1.5em;
+  gap: 1em;
+}
+
+h1 {
+  font-size: 3em;
+}
