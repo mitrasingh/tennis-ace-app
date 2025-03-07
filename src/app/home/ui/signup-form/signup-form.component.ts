@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Signup } from '../../../models/signup.model';
 
 @Component({
   selector: 'app-signup-form',
@@ -6,4 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup-form.component.css'],
   imports: [],
 })
-export class SignupFormComponent {}
+export class SignupFormComponent {
+  formData = output<Signup>();
+  fb = new FormBuilder();
+}
