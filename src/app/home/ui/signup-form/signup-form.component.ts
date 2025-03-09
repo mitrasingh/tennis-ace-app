@@ -1,5 +1,5 @@
 import { Component, output } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Signup } from '../../../models/signup.model';
 import { passwordMatchValidator } from '../../utils/passwordMatchValidator';
 
@@ -7,7 +7,7 @@ import { passwordMatchValidator } from '../../utils/passwordMatchValidator';
   selector: 'app-signup-form',
   templateUrl: './signup-form.component.html',
   styleUrls: ['./signup-form.component.css'],
-  imports: [],
+  imports: [ReactiveFormsModule],
 })
 export class SignupFormComponent {
   formData = output<Signup>();
