@@ -45,4 +45,13 @@ export class SignupFormComponent {
   get confirmPassword() {
     return this.signupForm.get('confirmPassword');
   }
+
+  emitData(): void {
+    this.isSubmitted = true;
+    if (this.signupForm.valid) {
+      this.formData.emit(this.signupForm.getRawValue());
+    } else {
+      return console.log('error');
+    }
+  }
 }
