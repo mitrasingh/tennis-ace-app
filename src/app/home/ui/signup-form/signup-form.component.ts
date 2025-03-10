@@ -24,4 +24,25 @@ export class SignupFormComponent {
     },
     { validators: passwordMatchValidator }
   );
+
+  // Getter to access form control easier and more readable in the template
+  get firstName() {
+    return this.signupForm.get('firstName');
+  }
+
+  get lastName() {
+    return this.signupForm.get('lastName');
+  }
+
+  get email() {
+    return this.signupForm.get('email');
+  }
+
+  get password() {
+    return this.signupForm.get('password');
+  }
+
+  get confirmPassword() {
+    return this.signupForm.get('confirmPassword');
+  }
 }
