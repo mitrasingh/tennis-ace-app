@@ -12,6 +12,7 @@ import { passwordMatchValidator } from '../../utils/passwordMatchValidator';
 export class SignupFormComponent {
   formData = output<Signup>();
   fb = new FormBuilder();
+  isSubmitted = false;
 
   signupForm = this.fb.nonNullable.group(
     {
