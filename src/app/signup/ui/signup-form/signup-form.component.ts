@@ -2,11 +2,12 @@ import { Component, output } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Signup } from '../../../models/signup.model';
 import { passwordMatchValidator } from '../../utils/passwordMatchValidator';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-signup-form',
   templateUrl: './signup-form.component.html',
   styleUrls: ['./signup-form.component.css'],
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
 })
 export class SignupFormComponent {
   formData = output<Signup>();
