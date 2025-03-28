@@ -1,11 +1,12 @@
 import { Component, output } from '@angular/core';
 import { ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 import { Login } from '../../../models/login.model';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: `app-login-form`,
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css'],
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
 })
 export class LoginFormComponent {
   formData = output<Login>();
